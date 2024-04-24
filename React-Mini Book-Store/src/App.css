@@ -1,0 +1,32 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.App{
+    text-align: center;
+    font-family:futura;
+    font-weight: 400;
+}
+button{
+    background-color:rgb(241, 73, 73);
+    padding:6px 14px;
+    font-weight:600;
+    color:black;
+    
+}
+button:hover{
+    color:whitesmoke;
+    background-color: rgb(31, 208, 102);
+}
+body{
+    height:100%;
+    width:100%;
+    /* background-color: rgb(105, 105, 105); */
+    /* background-image: url('https://e0.pxfuel.com/wallpapers/249/211/desktop-wallpaper-palm-tree-palm-tree-background-new-background.jpg'); */
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/323/123/601/black-background-minimalism-text-humor-wallpaper-preview.jpg');
+    color:rgb(255, 255, 255);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:contain;
+}
