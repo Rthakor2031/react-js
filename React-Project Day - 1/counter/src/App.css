@@ -1,0 +1,14 @@
+.App{
+    text-align: center;
+}
+.App div{
+    margin:10% auto;
+    border-radius:10px;
+    background-color:rgb(58, 161, 195)
+}
+.btn-group button{
+    padding:5px 14px;
+    margin:0px 0px 3px 15px;
+    border:1px solid black;
+    border-radius: 4px;
+}
