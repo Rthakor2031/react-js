@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useEffect, useState } from 'react';
+import Post from './Components/Post';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  let [posts, setPosts] = useState([]);
+  let [load , setload] = useState(false)
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+  const fetchdata = () => {
+    setload(true);
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((res) => res.json())
+      .then((data) => {
+        setPosts(data);
+        setload(false);
+      })
+      .catch((err) => {
+        alert('Error Found......');
+        setload(false);
+      });
+  };
+
+  return (load? <h1 style={{textAlign:"center" , color:"Red"}}>LoaDinG...........</h1> : <div className="App">
+      <button onClick={fetchdata} style={{display:"block" , margin:"auto"}}>GET POSTS</button>
+      <div className="container">
+        {posts.map((el) => (
+          <Post key={el.id} title={el.title} body={el.body} />
+        ))}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default App
+export default App;
