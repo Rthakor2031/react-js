@@ -36,7 +36,7 @@ const StudentForm = () => {
         <div className="Outline-box">
         
           <form action="" onSubmit={formsubmit}>
-          <h4>Student Registration Form</h4>
+          <h1>Student Registration Form</h1>
             <input type="text" onChange={handleChange} placeholder='Enter Student Fullname*' name='fullName' value={formData.fullName} className='i-feild' /><br /><br />
             <input type="text" onChange={handleChange} placeholder='Enter Student Email@*'  name='email' value={formData.email} className='i-feild'/><br /><br />
             <input type="password" onChange={handleChange} placeholder='Enter Password*' name='password' value={formData.password} className='i-feild'/><br /><br /><br />
