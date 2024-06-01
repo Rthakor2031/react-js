@@ -26,7 +26,7 @@ const ThemeProvider = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {children}
+      {children}  {/* Noted:- children mean app.jsx*/}
     </ThemeContext.Provider>
   );
 };
