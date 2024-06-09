@@ -13,6 +13,7 @@ const ProductDetails = () => {
       .catch((error) => console.error("Error fetching product:", error));
   }, [id]);
 
+  //*****************************for delete item************************************/
   const handleDelete = () => {
     axios
       .delete(`http://localhost:8000/Product/${id}`)
@@ -21,7 +22,6 @@ const ProductDetails = () => {
         console.log(product);
       })
       .catch((error) => console.error("Error deleting product:", error));
-      
   };
 
   if (!product) {
@@ -29,10 +29,12 @@ const ProductDetails = () => {
   }
 
   return (
-    <div style={{ textAlign: "center" }}>
+    <div style={{ textAlign: "center"}}>
         <h2>ProductDetails</h2>
-      <h1>{product.title}</h1>
-      <img src={product.image} alt={product.title} height="200" />
+        <br /><br />
+        <div style={{border:"1px solid gray",width:"60%",height:"auto",margin:"auto",padding:"10px",borderRadius:"15px"}}>
+        <h1>{product.title}</h1>
+      <img src={product.image} alt={product.title} height={300} width={300}/>
       <p>Price: ${product.price}</p>
       <p>Category: {product.category}</p>
       <p>{product.description}</p><br />
@@ -40,11 +42,13 @@ const ProductDetails = () => {
         Edit
       </Link>
 
-      <Link to={`/Deleteproduct/${product.id}`} style={{ marginRight: "10px",backgroundColor:"teal",padding:"7px 27px",borderRadius:"5px",color:"white" ,textDecoration:"none"}}>
+      <Link onClick={handleDelete} to={`/Deleteproduct/${product.id}`} style={{ marginRight: "10px",backgroundColor:"teal",padding:"7px 27px",borderRadius:"5px",color:"white" ,textDecoration:"none"}}>
         Delete
       </Link>
+      <br /><br />
 
-      <button onClick={handleDelete}>Delete</button>
+      {/* <button onClick={handleDelete}>Delete</button> */}
+        </div>
     </div>
   );
 };

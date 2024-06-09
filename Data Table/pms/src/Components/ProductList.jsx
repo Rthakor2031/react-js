@@ -12,7 +12,7 @@ export const ProductList = () => {
   //************Item Get part using Axios.get method**********************/
 
   useEffect(() => {
-    axios.get("http://localhost:8000/Product/", {
+    axios.get("http://localhost:8000/Product", {
         params: {
           category: filter,
           _page: page,
@@ -68,6 +68,7 @@ export const ProductList = () => {
           <option value="men's clothing">men's clothing</option>
           <option value="women's clothing">women's clothing</option>
           <option value="jewelery">jewelery</option>
+          <option value="perfume">perfume</option>
           <option value="electronics">electronics</option>
         </select>
 
@@ -85,7 +86,7 @@ export const ProductList = () => {
         }}
       >
         {products.map((el) => (
-          <div key={el.id} style={{border:"1px solid black",boxShadow:"0px 6px 6px rgba(0,0,0,0.25)", height:"600px",padding:"10px"}}>
+          <div key={el.id} style={{minWidth:"100%",border:"1px solid black",boxShadow:"0px 6px 6px rgba(0,0,0,0.25)", height:"600px",padding:"10px"}}>
             <p>{el.id}</p>
             <img src={el.image} alt={el.title} height={200} width={200} />
             <p>{el.category}</p>
@@ -100,7 +101,7 @@ export const ProductList = () => {
         👈Previous
       </button>
       <b>{page}</b>
-      <button onClick={() => setpage(page + 1)} disabled={page == products.length + 1}>
+      <button onClick={() => setpage(page + 1)}>
         Next👉
       </button>
       <br />

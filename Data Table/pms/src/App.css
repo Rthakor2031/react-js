@@ -16,8 +16,10 @@ body h2{
     padding: 15px;
     border-radius: 5px;
     text-align: center;
-    width: 100%;
+    min-width:100%;
+    margin: auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.35);
+    margin-top:100px;
 }
 
 .Container{
@@ -67,10 +69,49 @@ select option {
 .navbar{
   display: flex;
   justify-content:space-evenly;
-  width:80%;
-  margin:20px auto;
+  margin: auto;
   font-size:17px;
+  position: fixed;
+  top:0px;
+  background-color: #098080;
+  height:80px;
+  min-width:100%;
   font-weight:600;
   align-items: center;
+}
+/* table css */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+thead {
+  background-color: #4CAF50;
+  color: white;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+td img {
+  border-radius: 8px;
 }
   
