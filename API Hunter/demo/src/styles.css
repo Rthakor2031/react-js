@@ -1,0 +1,274 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+/* Container for the home links */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+/* Styling for the links */
+.home-container a {
+  text-decoration: none;
+  color: #008cba;
+  margin: 20px 0;
+  font-size: 1.5em;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.home-container a:hover {
+  color: #005f5f;
+}
+
+/* Styling for the link text */
+.home-container h3 {
+  margin: 0;
+}
+
+
+/* Container for the login form */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+/* Styling for the form */
+.login-form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+/* Styling for the form elements */
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Styling for the form submit button */
+.login-form input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.login-form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Styling for the label */
+.login-form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Styling for the Go Back link */
+.login-form .go-back-link {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.login-form .go-back-link a {
+  text-decoration: none;
+  color: #008cba;
+  font-weight: 500;
+}
+
+.login-form .go-back-link a:hover {
+  text-decoration: underline;
+}
+
+/* Container for the dashboard */
+.dashboard-container {
+  background-color: #f4f4f4; /* Background color */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+/* Styling for the logout button */
+.dashboard-container button {
+  background-color: #e60000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dashboard-container button:hover {
+  background-color: #cc0000;
+}
+
+/* Styling for the user token text */
+.dashboard-container p {
+  font-size: 1em;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Styling for the token value */
+.dashboard-container b {
+  color: #008cba;
+}
+
+/* Centering the products table */
+.dashboard-container .products-table-container {
+  display: flex;
+  justify-content: center;
+}
+/* Styling for the loader container */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fbf9f9;
+  font-family: Arial, sans-serif;
+  font-size: 1.5em;
+  color: #1aff00;
+  font-weight: bolder;
+}
+
+/* Styling for each loader letter */
+.loader-letter {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 1.5s infinite;
+}
+
+/* Keyframes for fading in letters */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+
+
+/* ProductsTable.css */
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+th {
+  background-color: #4CAF50; /* Dark Green */
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Light Gray */
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* White */
+}
+
+tbody tr:hover {
+  background-color: #ddd; /* Gray */
+}
+
+/* Container for the product details */
+#products-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #f4eded;
+  width: 60%;
+  border-radius: 10px;
+  background-color: #f8f8f8; /* Updated background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the product brand */
+#product-brand {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Styling for the product image */
+#product-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.2s;
+}
+
+#product-image:hover {
+  transform: scale(1.05);
+}
+
+/* Styling for the product category */
+#product-category {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Styling for the product details */
+#product-details {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Styling for the product price */
+#product-price {
+  font-size: 1.5em;
+  color: #e60000;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
