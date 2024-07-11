@@ -1,0 +1,20 @@
+
+.light_theme {
+  color: black;
+  background-color: white;
+  height:250px;
+}
+
+.dark_theme {
+  color: white;
+  background-color: black;
+  height:250px;
+}
+
+#Value{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:60%;
+  margin: auto;
+}
