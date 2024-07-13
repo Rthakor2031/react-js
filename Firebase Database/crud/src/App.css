@@ -1,0 +1,113 @@
+/* src/App.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  h3 {
+    color: #333;
+    text-align: center;
+  }
+  
+  form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+  }
+  
+  input:focus {
+    border-color: #0056b3;
+    outline: none;
+  }
+  
+  button {
+    background: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:disabled {
+    background: #b3b3b3;
+  }
+  
+  button:hover:enabled {
+    background: #004494;
+  }
+  
+  .error {
+    color: #ff0000;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  /* Getdatafromfirestore.css */
+/* Getdatafromfirestore.css */
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
