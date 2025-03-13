@@ -82,10 +82,7 @@ const toggleSubmit = () => {
             onBlur={() => handleBlur('password')}
             style={{ borderColor: getBorderColor('password') }}
           /><br /><br />
-            {/* <div style={{display:"flex",justifyContent:"center"}}>
-            <input type="submit" className='btn' value="Submit"/><br /><br />
-            <input type="submit" className='btn' value="Clear-Storage" onClick={handledelet} style={{backgroundColor:"red"}}/>
-            </div> */}
+           
             <button className='btn'style={{ backgroundColor: isSubmitted ? "red" : "green",padding: "8px 45px",fontWeight: "bolder",color: "white"}} onClick={toggleSubmit}>{isSubmitted ? "Unsubmit" : "Submit"}</button> 
         </form>
       </div>

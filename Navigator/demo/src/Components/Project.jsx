@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 
 const Project = () => {
   let [data, setData] = useState([]);
-  const { id } = useParams();
+  const { id } = useParams(); 
 
 //*********/ item get with id *******//
 

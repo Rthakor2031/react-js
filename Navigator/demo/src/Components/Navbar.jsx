@@ -11,7 +11,6 @@ const Navbar = () => {
         <Link to={"/product"} style={{textDecoration:"none" , color:"white" , fontSize:"17px"}}>Product</Link>
         <Link to={"/project"} style={{textDecoration:"none" , color:"white" , fontSize:"17px"}}>Project</Link>
         <Link to={"/login"} style={{textDecoration:"none" , color:"white" , fontSize:"17px"}}>Login</Link>
-        {/* <Link to={"/logout"} style={{textDecoration:"none" , color:"white" , fontSize:"17px"}}>logout</Link> */}
 
     </div>
     </div>
